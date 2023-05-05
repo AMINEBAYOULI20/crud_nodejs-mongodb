@@ -5,7 +5,7 @@ var bcrypt = require('bcryptjs');
 const DATABASE = async () => {
   try {
     await Mongoose.connect(
-      'mongodb://localhost:27017/Belgacem',
+      'mongodb://localhost:27017/Crud',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -19,7 +19,7 @@ const DATABASE = async () => {
           console.log('connected to db!!')
           let admin = await user.findOne({
             role: 'admin',
-            mail: 'BelgacemChandoul@gmail.com',
+            mail: 'aminebayouli@gmail.com',
             cin: "134256869"
           });
           if (!admin) {
@@ -27,9 +27,9 @@ const DATABASE = async () => {
             const salt = await bcrypt.genSalt(10);
             const hashed = await bcrypt.hash(password, salt);
             let new_user = new user({
-              FirstName: 'Belgacem',
-              lastname: 'Chandoul',
-              mail: 'BelgacemChandoul@gmail.com',
+              FirstName: 'amine',
+              lastname: 'bayouli',
+              mail: 'aminebayouli@gmail.com',
               password: hashed,
               Phone: '29787582',
               cin: "134256869",

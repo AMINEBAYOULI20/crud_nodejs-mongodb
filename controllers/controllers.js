@@ -13,7 +13,7 @@ exports.inscrit_user = async (req, res) => {
     mail,
     password,
     governorate,
-    psw,
+
     DateOfBirth,
   } = req.body
   try {

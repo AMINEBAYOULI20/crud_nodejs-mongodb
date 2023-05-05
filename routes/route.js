@@ -1,24 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const controllers = require("../controllers/controllers");
-const validator = require("../midalwares/validator")
-const multer = require("multer");
-const jwt_middleware = require("../midalwares/jwt_validate");
 
-const storage = multer.diskStorage({
 
-    destination: function (req, file, callback) {
-        callback(null, './uploads/');
-    },
-    filename: function (req, file, callback) {
-        callback(null, Date.now() + '-' + file.originalname);
-    }
-});
 
-const upload = multer({
-    storage: storage,
 
-})
+
 
 
 

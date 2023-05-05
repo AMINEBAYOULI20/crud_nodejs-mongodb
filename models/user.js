@@ -38,10 +38,9 @@ const User = new schema({
         unique: true
 
     },
-    // password: {
-    //     type: String,
-
-    // },
+    password: {
+        type: String,
+    },
 
     role: {
         type: String,
